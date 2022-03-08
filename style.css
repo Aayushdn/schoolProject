@@ -109,10 +109,6 @@ main {
   /* padding: 0 0 0 350px; */
 }
 
-.skills {
-  padding: 0 0 0 350px;
-}
-
 .contentTxt {
   font-weight: 200;
 }
@@ -230,35 +226,10 @@ main {
   }
 }
 
-/* .cta--primary:hover {
-  background: var(--cta-background2);
-  color: var(--primaryColor);
-  border: none;
-} */
+/**/
 
-/* .cta .btn {
-  width: 250px;
-  color: white;
-  text-transform: uppercase;
-  font-family: consolas;
-  font-size: 1.1rem;
-}
-
-.cta--primary {
-  background: var(--cta-background);
-}
-
-.cta--secondary {
-  background: transparent;
-}
-
-.meDetail {
-  color: rgb(202, 198, 198);
-} */
-
-/*  ------------- Projects ----------------------*/
-
-.project {
+.skillSection {
+  margin: 20px 0;
   padding: 0 0 0 350px;
 }
 
@@ -272,39 +243,81 @@ main {
   justify-content: space-between;
 }
 
-/*            random  cdod*/
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: var(--highlight-color1);
-  position: relative;
-}
-
-.box::after {
-  content: "";
-  width: 20px;
-  right: 0%;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-}
-
-/*  Skill Section   */
-
-/* .card {
+.card {
+  height: 300px;
   width: 200px;
-  height: 250px;
-  border: 1px solid white;
+  box-shadow: 0px 7px 13px 3px black;
+  padding: 10px 20px;
   text-align: center;
-  margin-bottom: 100px;
-  box-shadow: 5px 5px 15px black;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.card:hover {
+  /* box-shadow: 0px 7px 13px 3px var(--highlight-color2); */
+  animation: hoverScale 0.5s ease-in;
 }
 
 .sectionHead {
-  margin-bottom: 30px;
+  border-left: 10px solid red;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  margin: 30px 0px;
 }
 
-.cardHead img {
+.cardBody {
+  font-size: 1.1rem;
+}
+.cardImage {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@keyframes hoverScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*  ------------- Projects ----------------------*/
+
+.projectSection {
+  padding: 0 0 0 350px;
+}
+
+.projectCard {
+  display: flex;
+}
+
+.projectImg {
+  flex: 1;
+}
+
+.projectImg img {
   width: 100%;
   height: 100%;
-} */
+}
+
+.projectDetail {
+  flex: 2;
+  padding: 40px;
+}
