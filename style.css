@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+/* -------------------- REsetting cSS ------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +27,8 @@
   );
 }
 
+/* Body Styling and text classes*/
+
 body {
   background-color: var(--backgroundColor);
   color: var(--primaryColor);
@@ -36,13 +40,36 @@ body {
   margin: auto;
 }
 
+titleTxt {
+  font-family: consolas;
+  text-transform: uppercase;
+  margin: 10px 5px 0 0;
+}
+
+.subTxt {
+  /* font-family: consolas; */
+  color: rgb(202, 198, 198);
+}
+
+.tag {
+  color: var(--highlight-color2);
+}
+
+.contentTxt {
+  font-weight: 200;
+}
+
+/*  ----------------------- Top sections -----------------------*/
+
 .top {
   display: flex;
-  height: 100vh; /*  ~ vh: viewport height */
+  height: 100vh;
+  position: relative;
   max-height: 700px;
 }
 
 .top .navigation {
+  display: none;
   border-right: 1px solid gray;
   height: 90%;
   margin-top: 20px;
@@ -50,11 +77,6 @@ body {
   width: 300px;
   position: fixed;
 }
-/* .navBar {
-  position: fixed;
-  height: 100%;
-} */
-
 .navLinks {
   list-style: none;
   height: 100%;
@@ -70,13 +92,10 @@ body {
 }
 
 .topMain {
-  padding: 50px 0 0 300px;
-}
-
-.top main {
   height: 100%;
+  padding: 50px;
+
   width: 100%;
-  /* padding: 50px 0 0 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,29 +107,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.titleTxt {
-  font-family: consolas;
-  text-transform: uppercase;
-  margin: 10px 5px 0 0;
-}
-
-.subTxt {
-  /* font-family: consolas; */
-  color: rgb(202, 198, 198);
-}
-
-.tag {
-  color: var(--highlight-color2);
-}
-
-main {
-  /* padding: 0 0 0 350px; */
-}
-
-.contentTxt {
-  font-weight: 200;
 }
 
 .profileImage {
@@ -228,9 +224,9 @@ main {
 
 /**/
 
-.skillSection {
+.skillsSection {
   margin: 20px 0;
-  padding: 0 0 0 350px;
+  /* padding: 0 0 0 350px; */
 }
 
 .card2 {
@@ -263,7 +259,7 @@ main {
 }
 
 .sectionHead {
-  border-left: 10px solid red;
+  border-left: 10px solid var(--highlight-color2);
   padding-left: 10px;
   font-size: 1.5rem;
   margin: 30px 0px;
@@ -300,16 +296,25 @@ main {
 
 /*  ------------- Projects ----------------------*/
 
+.skillsSection {
+  padding: 50px;
+}
 .projectSection {
-  padding: 0 0 0 350px;
+  padding: 50px;
 }
 
 .projectCard {
   display: flex;
+  box-shadow: 5px 7px 13px black;
+  margin: 40px 20px 40px 0;
+  max-height: 250px;
+  border-radius: 10px;
+  /* padding: 20px 20px; */
 }
 
 .projectImg {
   flex: 1;
+  display: flex;
 }
 
 .projectImg img {
@@ -320,4 +325,308 @@ main {
 .projectDetail {
   flex: 2;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.descTop {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.descMid {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.flag {
+  padding: 2px 5px;
+  margin: 5px 2px;
+  background-color: #c4c4c4;
+  color: black;
+  border-radius: 5px;
+}
+
+.descBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descBottom p,
+.more {
+  color: #5eafe5;
+  cursor: pointer;
+  border-bottom: 2px dotted #5eafe5;
+}
+
+.more {
+  text-align: center;
+  margin: auto;
+}
+
+.likeStat img {
+  width: 35px;
+  height: 35px;
+}
+
+.likeStat img:hover {
+  animation: hoverScale 0.5s ease-in infinite;
+}
+
+.likeStat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --------------------------------- Experiences --------------------------*/
+
+.experienceSection {
+  padding: 50px;
+  margin: 0px 0;
+}
+
+.timeline {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.event {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 5px 7px 13px black;
+  margin-bottom: 30px;
+  padding: 30px;
+  /* background-color: white; */
+}
+
+.eventHead {
+  color: white;
+  font-weight: 600;
+}
+
+.eventDate {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 5px 0 20px 0;
+}
+
+.eventDesc {
+  line-height: 30px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.eventDesc ul {
+  list-style: none;
+}
+
+.clearDiv {
+  list-style: none;
+}
+
+/* ------------------------- contact me page ----------------------*/
+
+.contactSection {
+  padding: 50px;
+}
+
+.contact {
+  padding: 50px 0;
+  display: flex;
+  width: 100%;
+}
+
+.connects {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: url("./assets/logos/netflixProject.jpg") no-repeat;
+}
+
+.connects li svg {
+  height: 30px;
+  fill: white;
+  cursor: pointer;
+}
+
+.connects li:hover svg {
+  fill: var(--highlight-color2);
+  transition: all 0.8s ease;
+}
+
+.findMe {
+  flex: 1;
+}
+.contactForm {
+  flex: 1;
+}
+
+.contactForm input {
+  width: 90%;
+  outline: none;
+  margin: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--highlight-color2);
+  color: white;
+}
+
+.contactForm input:nth-child(3) {
+  height: 200px;
+}
+
+.formBtn {
+  width: 30%;
+  margin: 20px 20px;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  background-color: transparent;
+  /* background-color: var(--highlight-color2); */
+  border: 2px solid var(--highlight-color2);
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.formBtn:hover {
+  background-color: var(--highlight-color2);
+  color: white;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 5px 30px;
+}
+
+/* -------------- Media Query ----------------*/
+
+@media screen and (min-width: 1000px) {
+  .scrollDiv {
+    left: 60%;
+  }
+
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #c4c4c4;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .event {
+    margin-bottom: 50px;
+  }
+
+  .top .navigation {
+    display: block;
+  }
+
+  .events {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event:nth-child(odd) {
+    transform: translateX(-30px);
+  }
+
+  .event::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    background-color: white;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .event:nth-child(odd)::after {
+    transform: translateY(-50%) rotate(45deg);
+    right: -10%;
+  }
+
+  .event:nth-child(even)::after {
+    left: -10%;
+  }
+
+  .event:nth-child(even) {
+    transform: translateX(30px);
+  }
+
+  .skillsSection,
+  .projectSection,
+  .experienceSection,
+  .contactSection,
+  .top main {
+    padding: 0 0 0 350px;
+  }
+  /* body {
+    background: transparent;
+  } */
+}
+
+@media screen and (max-width: 800px) {
+  .scrollDiv {
+    display: none;
+  }
+  .topMain {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .detail {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    margin: 20px 0;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .skillsSection,
+  .projectSection,
+  .experienceSection {
+    padding: 0 30px;
+  }
+
+  /* ----------------  skill -------------------------*/
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projectDetail .descMid {
+    margin: 20px 0;
+  }
+
+  .projectImg {
+    display: none;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .connects {
+    padding: 50px;
+  }
 }
