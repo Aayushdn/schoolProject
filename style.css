@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;800&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* -------------------- REsetting cSS ------------*/
 
@@ -32,7 +32,7 @@
 body {
   background-color: var(--backgroundColor);
   color: var(--primaryColor);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -77,6 +77,7 @@ titleTxt {
   width: 300px;
   position: fixed;
 }
+
 .navLinks {
   list-style: none;
   height: 100%;
@@ -146,7 +147,7 @@ titleTxt {
   border: none;
   cursor: pointer;
 
-  font-family: "Inconsolata", monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: 1.2rem;
   letter-spacing: 0.2ch;
   font-weight: 600;
@@ -170,7 +171,7 @@ titleTxt {
 }
 
 .cta--primary::before {
-  content: "";
+  content: '';
   width: 1%;
   z-index: -1;
   left: 0;
@@ -200,7 +201,7 @@ titleTxt {
 }
 
 .scrollBox::before {
-  content: "";
+  content: '';
   width: 5px;
   height: 5px;
   background-color: white;
@@ -450,7 +451,7 @@ titleTxt {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background: url("./assets/logos/netflixProject.jpg") no-repeat;
+  background: url('./assets/logos/netflixProject.jpg') no-repeat;
 }
 
 .connects li svg {
@@ -521,7 +522,7 @@ titleTxt {
   }
 
   .timeline::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 2px;
     height: 100%;
@@ -549,7 +550,7 @@ titleTxt {
   }
 
   .event::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 20px;
     background-color: white;
@@ -629,4 +630,25 @@ titleTxt {
   .connects {
     padding: 50px;
   }
+}
+
+.projectCard {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease-in;
+}
+
+.event {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-in;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.downloadFile {
+  display: none;
 }
